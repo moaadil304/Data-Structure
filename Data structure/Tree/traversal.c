@@ -21,39 +21,39 @@ struct Node *createNode(int val)
 
 //preorder traversal
 
-void preorder(struct Node* newNode)
+void preorder(struct Node* newNode)  // In preorder nodes are arranged Root-left-right
 {
     if(newNode!=NULL)
     {
-        printf("%d",newNode->data);
+        printf("%d ",newNode->data);
         preorder(newNode->left);
          preorder(newNode->right);
     }
 }
 
-// Inorder traversal
+// Inorder traversal     
 
-void inorder(struct Node* newNode)
+void inorder(struct Node* newNode)      //In inorder nodes are arranged left-root-right
 {
     if(newNode!=NULL)
     {
          
-        preorder(newNode->left);
-        printf("%d",newNode->data);
-         preorder(newNode->right);
+        inorder(newNode->left);
+        printf("%d ",newNode->data);
+         inorder(newNode->right);
     }
 }
 
 // Postorder Traversal
 
-void postorder(struct Node* newNode)
+void postorder(struct Node* newNode)     ////In postorder nodes are arranged root-left-right
 {
     if(newNode!=NULL)
     {
          
-        preorder(newNode->left);
-         preorder(newNode->right);
-         printf("%d",newNode->data);
+        postorder(newNode->left);
+         postorder(newNode->right);
+         printf("%d ",newNode->data);
     }
 }
 
